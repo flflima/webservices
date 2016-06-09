@@ -1,0 +1,20 @@
+package random;
+
+import javax.annotation.Resource;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
+
+@WebService
+public class Random {
+	@Resource
+	private WebServiceContext wsc;
+
+	public double geraRandom(double max) {
+		MessageContext mc = wsc.getMessageContext();
+		
+		// detalhes do header
+		Map headers = mc.get(MessageContext.HTTP_REQUEST_HEADERS);
+		return Math.random() * max;
+	}
+}

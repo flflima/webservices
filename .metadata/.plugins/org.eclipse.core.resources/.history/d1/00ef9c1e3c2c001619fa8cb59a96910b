@@ -1,0 +1,23 @@
+package webservices.testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import webservices.OperacoesMatematicas;
+
+public class OperacoesMatematicasTest {
+	private public OperacoesMatematicas operacao;
+	
+	@Before
+	public void iniciar() {
+		this.operacao = new OperacoesMatematicas();
+	}
+
+	@Test
+	public void testSomar() {
+		fail("Not yet implemented");
+	}
+
+}

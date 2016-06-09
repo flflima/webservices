@@ -1,0 +1,13 @@
+package cotacao;
+
+import javax.jws.WebService;
+
+@WebService
+public class Cotacao {
+
+	public double verificarCotacao(String moedaAtual, String moedaConvertida) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,53 @@
+package webservice;
+
+import precogasolina.PrecoGasolina;
+import precogasolina.PrecoGasolinaService;
+import validarcpfecnpj.Validador;
+import validarcpfecnpj.ValidadorService;
+import cotacao.Cotacao;
+import cotacao.CotacaoService;
+import calculardistancia.CalculadorDistancia;
+import calculardistancia.CalculadorDistanciaService;
+
+public class Consumidor {
+
+	public static void main(String[] args) {
+		// serviço calcular distancia
+		CalculadorDistanciaService distanciaService = new CalculadorDistanciaService();
+		// proxy distancia
+		CalculadorDistancia proxyDistancia = distanciaService.getCalculadorDistanciaPort();
+		
+		// servico cotação
+		CotacaoService cotacaoService = new CotacaoService();
+		// proxy cotação
+		Cotacao proxyCotacao = cotacaoService.getCotacaoPort();
+		
+		// serviço preço gasolina
+		PrecoGasolinaService gasolinaService = new PrecoGasolinaService();
+		// proxy preço gasolina
+		PrecoGasolina proxyGasolina = gasolinaService.getPrecoGasolinaPort();
+		
+		// validador cpf cnpj
+		ValidadorService validadorService = new ValidadorService();
+		// proxy validador
+		Validador proxyValidador = validadorService.getValidadorPort();
+		System.out.println(args[0] + " " +  args[1] + " " + args[2]);
+		String moedaAtual = args[0];
+		double cotacao = proxyCotacao.verificarCotacao(moedaAtual, "USD");
+		
+		String cpfOuCnpj = args[1];
+		boolean isDocumentoValido = proxyValidador.validarCPFeCNPJ(cpfOuCnpj);
+		
+		String[] enderecoCompleto = args[2].split(",");
+		String rua = enderecoCompleto[0];
+		int numero = Integer.valueOf(enderecoCompleto[1]);
+		double distancia = proxyDistancia.calcularDistancia(rua, numero);
+		
+		if (isDocumentoValido) {
+			double total = distancia * cotacao * proxyGasolina.obterPrecoGasolina();
+			
+			System.out.println("** Total a pagar: R$" + total);
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+package cotacao;
+
+import javax.xml.ws.Endpoint;
+
+import random.Random;
+
+public class CotacaoPublisher {
+
+	public static void main(String[] args) {
+		System.out.println("Cotação Webservice iniciando...");
+		Cotacao cotacao = new Cotacao();
+		Endpoint.publish("http://localhost:9090/cotacao", cotacao);
+	}
+
+}

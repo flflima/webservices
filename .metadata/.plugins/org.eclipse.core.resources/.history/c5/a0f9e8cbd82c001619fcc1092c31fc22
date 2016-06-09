@@ -1,0 +1,12 @@
+package validarCPFeCNPJ;
+
+import javax.jws.WebService;
+
+@WebService
+public class Validador {
+
+	public boolean validarCPFeCNPJ(String documento) {
+		return true;
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Consumidor.java&apos; to &apos;operacoesEJBClient/src/webservices.client&apos;&#x0D;&#x0A;- Original project: &apos;randomClient&apos;&#x0D;&#x0A;- Destination element: &apos;operacoesEJBClient/src/webservices.client&apos;&#x0D;&#x0A;- Original element: &apos;random.webservices.Consumidor.java&apos;" description="Copy compilation unit" destination="=operacoesEJBClient/src&lt;webservices.client" element1="/src&lt;random.webservices{Consumidor.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1465258324638" units="1" version="1.0"/>
+</session>

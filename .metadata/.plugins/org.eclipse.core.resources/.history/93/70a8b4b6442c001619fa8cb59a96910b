@@ -1,0 +1,28 @@
+package webservices.client;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.handler.MessageContext;
+
+import random.Random;
+import random.RandomService;
+import webservices.OperacoesMatematicas;
+import webservices.OperacoesMatematicasService;
+
+public class Consumidor {
+	public static void main(String[] args) {
+		// service
+		OperacoesMatematicasService service = new OperacoesMatematicasService();
+		
+		// proxy
+		OperacoesMatematicas proxy = service.getOperacoesMatematicasPort();
+		
+		// operação
+		double soma = proxy.somar(10, 10);
+		System.out.println("soma: 10 + 10 = " + soma);
+	}
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<conta>
+	<cliente>
+		<nome>Fulano de Tal</nome>
+	</cliente>
+	<limite>2000.0</limite>
+	<saldo>2000.0</saldo>
+</conta>

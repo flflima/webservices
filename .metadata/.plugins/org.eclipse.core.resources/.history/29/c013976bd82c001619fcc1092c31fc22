@@ -1,0 +1,22 @@
+package validarCPFeCNPJ.testes;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import validarCPFeCNPJ.Validador;
+
+public class ValidadorTest {
+	private Validador validador;
+	
+	@Before
+	public void iniciar() {
+		this.validador = new Validador();
+	}
+	
+	@Test
+	public void testaValidarCPFeCNPJ() {
+		fail("Not yet implemented");
+	}
+
+}
