@@ -1,8 +1,0 @@
-package cotacao;
-
-import javax.jws.WebService;
-
-@WebService
-public class Cotacao {
-
-}

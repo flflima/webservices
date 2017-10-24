@@ -1,4 +1,0 @@
-#GlassFish 3
-#Mon Jun 06 20:42:32 BRT 2016
-org.eclipse.jst.jee.server\:randomEJB=C\:\\java-dev\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\randomEJB
-org.eclipse.jst.jee.server\:operacoesEJB=C\:\\java-dev\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\operacoesEJB
